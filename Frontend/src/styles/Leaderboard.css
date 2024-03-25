@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'PixelifySans';
+    src: url(../assets/fonts/PixelifySans-Bold.ttf);
+}
+
+.background {
+    height: 100vh;
+}
+
+.leaderboardSelectContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.leaderboardSelect {
+    margin-top: 20px;
+}
+
+.tableContainer {
+    display: grid;
+    grid-template-rows: 0fr 0fr 0fr;
+    justify-content: center;
+    justify-items: center;
+    font-family: 'PixelifySans';
+    font-size: 1.25em;
+    text-align: center;
+    background-color: black;
+    height: 100%;
+}
+
+table {
+    width: 50vw;
+    max-width: 600px;
+    max-height: 500px;
+    grid-template-rows: 0fr 0fr 0fr;
+}
+
+th, td {
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.highScores {
+    color: aqua;
+}
+
+.tableHead {
+    color: yellow;
+}
+
+.tr1 {
+    color: white;
+}
+
+.tr2 {
+    color: red;
+}
+
+.tr3 {
+    color: orange;
+}
+
+.tr4 {
+    color: pink;
+}
+
+.tr5 {
+    color: yellow;
+}
+
+.tr6 {
+    color: yellow;
+}
+
+.tr7 {
+    color: green;
+}
+
+.tr8 {
+    color: aqua;
+}
+
+.tr8 {
+    color: teal;
+}
+
+.tr10 {
+    color: lime;
+}
