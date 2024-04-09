@@ -31,7 +31,7 @@ function App() {
       setLevel(trackImg);
       break;
     }
-    }, 200);
+    }, 500);
     
   }, []);
     
