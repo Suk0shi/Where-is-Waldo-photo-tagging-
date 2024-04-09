@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Header from './components/Header'
 import beachImg from './assets/images/beach.webp'
 import skiImg from './assets/images/ski-slopes.webp'
@@ -17,6 +17,8 @@ function App() {
   const [leaderboardForm, setLeaderboardForm] = useState(false)
   const [inputValue, setInputValue] = useState('');
   const [level, setLevel] = useState('')
+
+  const navigate = useNavigate();
   
   useEffect(() => {
     setTimeout(() => {
@@ -127,7 +129,7 @@ function App() {
       })
       .then((response) => {
         console.log(response)
-        window.location.href = '/leaderboard';
+        navigate('/leaderboard')
       })
       .catch((err) => {
         console.log(err)
