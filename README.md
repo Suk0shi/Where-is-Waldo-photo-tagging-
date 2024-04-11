@@ -1,6 +1,6 @@
 # Where-s-Waldo
 
-View live: https://whereiswald0.netlify.app/leaderboard
+View live: https://whereiswald0.netlify.app
 
 Backend repo: https://github.com/Suk0shi/Where-is-Waldo-Backend
 
