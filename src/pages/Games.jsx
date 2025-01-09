@@ -10,7 +10,7 @@ import '../styles/Games.css'
 function Games() {
 
     function createToken(level) {
-        fetch(`https://whereiswaldo.adaptable.app/startTimer`, {
+        fetch(`${import.meta.env.VITE_API_URL}/startTimer`, {
         method: 'Post', 
         headers: {
         //   'Authorization': `${localStorage.getItem('SavedToken')}`,

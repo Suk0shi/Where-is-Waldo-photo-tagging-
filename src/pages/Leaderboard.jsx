@@ -9,7 +9,7 @@ function Leaderboard() {
   const [level, setLevel] = useState('beach');
 
   useEffect(() => {
-    fetch(`https://whereiswaldo.adaptable.app/leaderboard/${level}`, {
+    fetch(`${import.meta.env.VITE_API_URL}/leaderboard/${level}`, {
       mode: 'cors'})
       .then((response) => response.json())
       .then((data) => { console.log(data), setLeaderboard(data)})

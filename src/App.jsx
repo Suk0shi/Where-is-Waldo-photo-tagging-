@@ -60,7 +60,7 @@ function App() {
 
   function submitAnswer(e, target) {
     e.preventDefault()
-    fetch(`https://whereiswaldo.adaptable.app/checkcoordinate`, {
+    fetch(`${import.meta.env.VITE_API_URL}/checkcoordinate`, {
         method: 'Post', 
         headers: {
           'Authorization': `${localStorage.getItem('SavedToken')}`,
@@ -111,7 +111,7 @@ function App() {
     const formData = new FormData(e.target);
     const payload = Object.fromEntries(formData);
 
-    fetch(`https://whereiswaldo.adaptable.app/addLeaderboard`, {
+    fetch(`${import.meta.env.VITE_API_URL}/addLeaderboard`, {
         method: 'Post', 
         headers: {
           'Authorization': `${localStorage.getItem('SavedToken')}`,
