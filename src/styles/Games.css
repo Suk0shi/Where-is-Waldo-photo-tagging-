@@ -1,16 +1,39 @@
+#root {
+    height: 100vh;
+}
+
+.pageContainer {
+    max-width: 65vw;
+    height: 656px;
+    background-color: black;
+    /* display: grid; */
+    /* grid-template-rows: 0fr 1fr; */
+}
+
+.pageContainer h1 {
+    text-align: center;
+}
+
 .levelCard {
-    width: 30vw;
-    max-width: 400px;
+    max-width: 250px;
     margin: 0 5vw;
     text-align: center;
 }
 
 .levelCard img {
     width: 100%;
-    border-radius: 20px;
+    /* border-radius: 20px; */
 }
 
 .levelContainer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    height: 530px;
+}
+
+.backendAlert {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
 }

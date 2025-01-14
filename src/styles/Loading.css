@@ -1,0 +1,12 @@
+.loadingPageContainer {
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+.loadingPage {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    height: 100%;
+}

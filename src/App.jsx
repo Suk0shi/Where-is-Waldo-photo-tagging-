@@ -21,20 +21,17 @@ function App() {
   const navigate = useNavigate();
   
   useEffect(() => {
-    setTimeout(() => {
-      switch (`${localStorage.getItem('SavedLevel')}`) {
-    case 'beach':
-      setLevel(beachImg);
-      break;
-    case 'ski':
-      setLevel(skiImg);
-      break;
-    case 'track':
-      setLevel(trackImg);
-      break;
-    }
-    }, 500);
-    
+    switch (`${localStorage.getItem('SavedLevel')}`) {
+      case 'beach':
+        setLevel(beachImg);
+        break;
+      case 'ski':
+        setLevel(skiImg);
+        break;
+      case 'track':
+        setLevel(trackImg);
+        break;
+      }
   }, []);
     
   
@@ -144,46 +141,55 @@ function App() {
   };
 
   return (
-    <>
-      <Header></Header>
-      {level === '' ? undefined : 
-      <div className='imgContainer'>
-        <a href='' onClick={targetingBox}>
-          <img src={level} alt="Where's Waldo beach image" ismap="true"/>
-        </a>
-      </div> }
-      {showBox ?
-      <div className='targetContainer' style={{top: `${top-25}px`, left: `${left-41}px`}}>
-        <div className='targetingBox'></div>
-        <div className='dropDown'>
-          <ul>
-            <li><a href='' onClick={e => submitAnswer(e, "waldo")}>Waldo</a></li>
-            <li><a href='' onClick={e => submitAnswer(e, "wenda")}>Wenda</a></li>
-            <li><a href='' onClick={e => submitAnswer(e, "wizard")}>Wizard</a></li>
-            <li><a href='' onClick={e => submitAnswer(e, "odlaw")}>Odlaw</a></li>
-          </ul>
+    <div className="backgroundBorderContainer">
+      <div className='backgroundBorder'>
+        {level === '' ? undefined : 
+        <div className='imgContainer'>
+          <a href='' onClick={targetingBox}>
+            <img src={level} alt="Where's Waldo beach image" ismap="true"/>
+          </a>
+        </div> }
+        <div className="pageLinks">
+          <Link to="/">
+              Games
+          </Link> 
+          <Link to="/leaderboard">
+              Leaderboard
+          </Link>
         </div>
-      </div> : undefined}
-      {hitBox.length ? hitBox.map((e) => {
-        const [hitX, hitY] = e.split(' ');
-        return <div className='hitBox' style={{top: `${hitY-25}px`, left: `${hitX-21}px`}}></div>
-      })
-      : undefined}
-      {(finTime === "" || leaderboardForm === true) ? undefined : 
-        <div className='winDisplay'><h2>{finTime}</h2><Link to="/">Play Again</Link></div>}
-      {leaderboardForm === false ? undefined : 
-      <form id='leaderboardForm' action="" method='POST' onSubmit={handleSubmit}>
-        <h2>{finTime}</h2>
-        <label htmlFor="username"> Username (3 Letters)</label>
-        <input type="text" name='username' placeholder='ABC' minLength={3} maxLength={3} 
-        onChange={handleInputChange} value={inputValue} required/>
-        <button>Submit time</button>
-        <Link to="/">
-          Cancel
-        </Link> 
-      </form>
-      }
-    </>
+        {showBox ?
+        <div className='targetContainer' style={{top: `${top-25}px`, left: `${left-41}px`}}>
+          <div className='targetingBox'></div>
+          <div className='dropDown'>
+            <ul>
+              <li><a href='' onClick={e => submitAnswer(e, "waldo")}>Waldo</a></li>
+              <li><a href='' onClick={e => submitAnswer(e, "wenda")}>Wenda</a></li>
+              <li><a href='' onClick={e => submitAnswer(e, "wizard")}>Wizard</a></li>
+              <li><a href='' onClick={e => submitAnswer(e, "odlaw")}>Odlaw</a></li>
+            </ul>
+          </div>
+        </div> : undefined}
+        {hitBox.length ? hitBox.map((e) => {
+          const [hitX, hitY] = e.split(' ');
+          return <div className='hitBox' style={{top: `${hitY-25}px`, left: `${hitX-21}px`}}></div>
+        })
+        : undefined}
+        {(finTime === "" || leaderboardForm === true) ? undefined : 
+          <div className='winDisplay'><h2>{finTime}</h2><Link to="/">Play Again</Link></div>}
+        {leaderboardForm === false ? undefined : 
+        <form id='leaderboardForm' action="" method='POST' onSubmit={handleSubmit}>
+          <h2>{finTime}</h2>
+          <label htmlFor="username"> Username (3 Letters)</label>
+          <input type="text" name='username' placeholder='ABC' minLength={3} maxLength={3} 
+          onChange={handleInputChange} value={inputValue} required/>
+          <button>Submit time</button>
+          <Link to="/">
+            Cancel
+          </Link> 
+        </form>
+        }
+      </div>
+    </div>
   )
 }
 

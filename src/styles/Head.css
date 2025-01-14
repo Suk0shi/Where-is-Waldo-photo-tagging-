@@ -6,8 +6,3 @@ header {
     height: 150px;
 }
 
-.pageLinks {
-    display: flex;
-    justify-content: space-around;
-    gap: 15px;
-}

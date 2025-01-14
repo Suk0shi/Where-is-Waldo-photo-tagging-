@@ -1,11 +1,45 @@
+.backgroundBorderContainer {
+  display: grid;
+  justify-content: center;
+  /* padding: 0px 15vw; */
+  background-color: black;
+}
+
+.backgroundBorder {
+  width: 65vw;
+  display: grid;
+  grid-template-rows: 1fr;
+  background-color: grey;
+  padding: 4vh 50px;
+  padding-bottom: 14vh;
+}
+
+.pageLinks {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 20vw;
+  margin-top: 40px;
+}
+
+.pageLinks a {
+  font-size: 1.5em;
+  color: white;
+  background-color: black;
+  border: 2px solid black;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+}
+
 .imgContainer {
   display: grid;
   justify-content: center;
 }
 
 img {
-  max-width: 90vw;
-  max-height: 80vh;
+  max-width: 65vw;
+  max-height: 656px;
 }
 
 .targetContainer {
