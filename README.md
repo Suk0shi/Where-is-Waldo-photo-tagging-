@@ -9,7 +9,10 @@ Backend repo: https://github.com/Suk0shi/Where-is-Waldo-Backend
 Features 
 - Three playable levels
 - Leaderboard system 
-- Backend score, time, and account storage/calculation to prevent alteration 
+- Backend score, time, and account storage/calculation to prevent alteration
 
-![image](https://github.com/Suk0shi/Where-is-Waldo-photo-tagging-/assets/144342852/ae7a3c27-507a-4a4c-a575-1b4f29073297)
+![image](https://github.com/user-attachments/assets/05631bb0-8fba-496a-b49e-4d0319f44705)
 
+![image](https://github.com/user-attachments/assets/40ed5a0b-dae5-44a8-9fee-ccdd0aba076a)
+
+![image](https://github.com/user-attachments/assets/e73dfe52-0f84-4a7a-af33-1cd065398d58)
